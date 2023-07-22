@@ -1,7 +1,7 @@
 name: Deploy Java Spring Boot Application to GitHub Pages
 on: push
 jobs:
-  deploy: null
+  deploy:
   steps:
     - checkout
     - run: mvn clean package
