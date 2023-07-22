@@ -32,6 +32,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
     - name: Deploy GitHub Pages site
       uses: actions/deploy-pages@v2.0.3
       with:
@@ -44,6 +46,6 @@ jobs:
         # Time in milliseconds between two deployment status report (default: 5 seconds)
         #reporting_interval: # optional, default is 5000
         # Name of the artifact to deploy
-        #artifact_name: # optional, default is github-pages
+        artifact_name: montie-py-0.0.1-SNAPSHOT
         # Is this attempting to deploy a pull request as a GitHub Pages preview site? (NOTE: This feature is only in alpha currently and is not available to the public!)
         #preview: # optional, default is false
