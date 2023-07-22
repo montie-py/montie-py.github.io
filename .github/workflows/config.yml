@@ -2,7 +2,7 @@ name: Deploy Java Spring Boot Application to GitHub Pages
 on: push
 jobs:
   deploy:
-    steps:fdsf
+    steps:
       - checkout
       - run: mvn clean package
       - run: gh-pages deploy
